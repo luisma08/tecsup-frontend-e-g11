@@ -1,0 +1,16 @@
+Semanticas 
+*Definicion: Es un etiqueta que nos da una informacion
+* Se estructura de tal forma que son usadas para el posicionamiento web.
+
+-Header: Se utiliza normalmente para definir la cabecera de la pagina
+-Article: suelen contener el contenido de un post, la entrada de un foro, etc.
+-Section(main): Representa una seccion independiente dentro de la pagina
+-nav: suelen ser para la navegacion principal del sitio web
+-aside: Nos permite gestionar contenido de forma independiente al contenido principal
+-footer: sirve para definir el pie de pagina de un documento
+
+
+No semanticas
+*Definicion: No explican nada y no nos dan referencia de nada
+
+div: seccionar partes de nuestro documento

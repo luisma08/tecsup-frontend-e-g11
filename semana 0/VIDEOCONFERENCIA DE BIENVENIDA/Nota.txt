@@ -1,0 +1,36 @@
+*Revisar material de estudio semana 0 y semana 1 para clases del jueves 03
+
+Mi Nombre: Jorge Mayta
+Edad: 26 años
+Profesión o estudios: Bachiller ing. sistemas e informatica
+Trabajo en: Independientemente como agencia de marketing, diseño y desarrollo web
+Conocimientos en Programación: Intermedio
+Que espero al terminar el bootcamp: Ampliar mis conocimientos en desarrollo web.
+Hobbies: Autoaprendisaje
+
+github
+
+*https://github.com/ElliotXLeo/tecsup-frontend-g9
+-https://github.com/ElliotXLeo/bootcamp-frontend-t-g15
+-https://github.com/ElliotXLeo/bootcamp-frontend-t-g14
+-https://github.com/ElliotXLeo/tecsup-frontend-o-g17
+
+crear carpeta
+-tecsup-frontend-e-g11
+
+Visual studio code
+-live server- gold light
+
+Elliot Garamendi
+
+https://www.linkedin.com/in/elliotgaramendi/
+https://www.instagram.com/elliotgaramendi/
+https://www.facebook.com/elliotgaramendi
+https://github.com/ElliotXLeo
+https://www.youtube.com/channel/UCE9whBrtYnLWrpzwk6z_JUA
+https://elliotxleo.github.io/portafolio-web-elgs/
+https://www.youtube.com/watch?v=D5vheGun0sA&list=PL-v-u4fOImqe_EJ_TmJIVa-l_tgikpkhP&index=5
+https://pokemons-crud-redux-react.netlify.app/pokemons 
+https://eakon.netlify.app 
+https://elliotxleo.github.io/portafolio-web-elgs/ 
+https://roadmap.sh/frontend 
