@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 1rem 0;
+  padding: 0.005rem 0;
 }
 .profile__container{
   padding: 0 2rem;
