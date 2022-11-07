@@ -95,10 +95,28 @@
   height: 100%;
 }
 
+/*new*/
+@keyframes tech-jump {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: 1rem;
+  }
+}
+.profile__figure {
+  display: none;
+}
+
 @media (min-width: 854px) {
   .profile{
     justify-content: start;
     margin: 0 3rem;
+  }
+  .profile__container{
+    display: flex;
+    width: 100%;
   }
   .card{
     max-width: 512px;
@@ -112,5 +130,74 @@
   }
   .card__body-keywords{
     font-size: 1rem;
+  }
+  .profile__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: auto;
+  }
+  
+  .profile__figure-image-container {
+    position: relative;
+    display: flex;
+    max-width: 256px;
+    margin: auto;
+  }
+  
+  .profile__figure-image {
+    border-radius: 50%;
+    width: 100%;
+    transition: var(--all-transitions);
+  }
+  
+  .profile__figure-image:hover {
+    box-shadow:
+      0 0 0.25rem 0 var(--primary-highlight-color),
+      0 0 0.5rem 0 var(--primary-highlight-color);
+  }
+  
+  .profile__figure-tech-one {
+    position: absolute;
+    width: 25%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -1s infinite alternate;
+    pointer-events: none;
+  }
+  
+  .profile__figure-tech-two {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.75s infinite alternate;
+    pointer-events: none;
+  }
+  
+  .profile__figure-tech-three {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.5s infinite alternate;
+    pointer-events: none;
+  }
+  
+  .profile__figure-tech-four {
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.25s infinite alternate;
+    pointer-events: none;
+  }
+  .profile__figure-image-container {
+    max-width: 360px;
   }
 }
