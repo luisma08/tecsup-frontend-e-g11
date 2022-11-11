@@ -1,8 +1,36 @@
+:root{
+  --primary-theme-color: #20232a82;
+  --secundary-theme-color: #282c34;
+  --primary-text-color: #fff;
+  --primary-higlight-color: #61dafb;
+  --primary-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
 body{
+  font-size: 16px; /* 1rem = 10px */
+  font-family: var(--primary-font-family);
+  margin: 0;
+}
+.element{
+  display: flex;
+}
+.hero{
   background-image: url("../img/bg\ \(1\)_11zon.webp");
   background-position: right 35% bottom 45%;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  background-color: var(--primary-theme-color);
+  max-width: 320px;
+  border: 0.2rem solid var(--primary-higlight-color);
+  border-radius: 2rem;
+  overflow: hidden;
 }
