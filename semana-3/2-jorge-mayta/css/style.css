@@ -3,6 +3,7 @@
 @import './modules/nav.css';
 @import './modules/layout.css';
 @import './modules/menu.css';
+@import './modules/utils.css';
 
 .body{
     background-color: var(--primary-theme-color);
@@ -12,11 +13,6 @@
   }
   
   
-  .list__link {
-    color: var(--primary-text-color);
-    text-decoration: none;
-  }
   
-  .list__link:hover {
-    color: var(--primary-highlight-color);
-  }
+  
+  
