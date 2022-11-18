@@ -2,6 +2,7 @@
 @import './modules/header.css';
 @import './modules/nav.css';
 @import './modules/layout.css';
+@import './modules/menu.css';
 
 .body{
     background-color: var(--primary-theme-color);
@@ -10,13 +11,6 @@
     margin: 0;
   }
   
-  .menu {
-    display: flex;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
   
   .menulink {
     color: var(--primary-text-color);

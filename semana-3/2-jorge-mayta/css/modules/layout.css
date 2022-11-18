@@ -2,8 +2,14 @@
     max-width: var(--max-width-container);
     margin: auto;
     padding-left: var(--padding-container);
-    padding-right: var(--padding-container);
+    padding-right: var(--padding-container); 
+  }
+
+  .f-elements{
     display: flex;
+  }
+
+  .f-elements--alignment{
     align-items: center;
     justify-content: space-between;
   }
