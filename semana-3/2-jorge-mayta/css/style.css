@@ -1,5 +1,5 @@
-@import '../modules/variables.css';
-@import '../modules/header.css';
+@import './modules/variables.css';
+@import './modules/header.css';
 .body{
     background-color: var(--primary-theme-color);
     color: var(--primary-text-color);
