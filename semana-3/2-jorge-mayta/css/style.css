@@ -12,11 +12,11 @@
   }
   
   
-  .menulink {
+  .list__link {
     color: var(--primary-text-color);
     text-decoration: none;
   }
   
-  .menulink:hover {
+  .list__link:hover {
     color: var(--primary-highlight-color);
   }
