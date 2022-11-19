@@ -7,3 +7,13 @@
 .gap-md{
     gap: var(--padding-section);
 }
+
+.p-relative{
+    position: relative;
+}
+
+@media (min-width: 768px){
+    .md\:f-row{
+        flex-direction: row;
+    }
+}
