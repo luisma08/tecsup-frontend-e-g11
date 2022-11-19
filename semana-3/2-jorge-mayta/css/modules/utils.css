@@ -1,6 +1,15 @@
+.p-relative {
+    position: relative;
+}
+  
 .f-col{
     flex-direction: column;
 }
+
+.flex-1{
+    flex:1;
+}
+
 .gap-sm{
     gap: calc(var(--padding-section)*0.5);
 }
