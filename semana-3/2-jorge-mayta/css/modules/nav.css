@@ -1,12 +1,12 @@
 .nav{
-    --test: #0088;
+    --translate-list-header: 100%;
     border: 0.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .nav:target{
-    --test: #0808;
+    --translate-list-header: 0; /* --test valor de la variable */
 }
 
 .nav__logo{
