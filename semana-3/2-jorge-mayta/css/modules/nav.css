@@ -24,6 +24,7 @@
 .nav__icon{
     position: absolute;
     right: var(--padding-container);
+    color: var(--primary-text-color);
     font-size: 1.75rem;
     text-decoration: none;
     transition: transform 0.25s;
@@ -42,7 +43,7 @@
         --translate-list-header: 0;
         --scale-menu:0;
     }
-    
+
     .nav:target {
         --scale-close: 0;
       }
