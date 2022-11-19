@@ -9,7 +9,12 @@
     display: flex;
   }
 
-  .f-elements--alignment{
+  .f-elements--between{
     align-items: center;
     justify-content: space-between;
+  }
+
+  .f-elements--center{
+    align-items: center;
+    justify-content: center;
   }
