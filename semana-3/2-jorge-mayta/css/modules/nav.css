@@ -1,7 +1,12 @@
 .nav{
+    --test: #0088;
     border: 0.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.nav:target{
+    --test: #0808;
 }
 
 .nav__logo{

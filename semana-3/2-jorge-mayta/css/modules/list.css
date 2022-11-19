@@ -11,6 +11,7 @@
     width: 100%;
     height: calc(100% - 4rem);
     background-color: var(--secondary-theme-color);
+    background-color: var(--test);
 }
 
 .list__link {
