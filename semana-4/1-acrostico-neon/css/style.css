@@ -1,5 +1,10 @@
-:root{
-    --primary-theme-color: deeppink;
-    --secundary-theme-color:#242a20;
-    --primary-highlight-color: #61dafb;
+@import './modules/variables.css';
+@import './modules/hero.css';
+
+.body{
+    background-image: linear-gradient(var(--primary-theme-color), var(--secundary-theme-color));
+    color: var(--primary-text-color);
+    font-family: serif;
+    min-height: 100vh;
 }
+
