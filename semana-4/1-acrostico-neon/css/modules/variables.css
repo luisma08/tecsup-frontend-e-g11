@@ -1,6 +1,7 @@
 :root{
-    --primary-theme-color: deeppink;
-    --secundary-theme-color:#242a20;
+    --primary-theme-color: #1da2d8;
+    --secundary-theme-color:#064273;
+    --third-theme-color:#003366;
     --primary-text-color:#fff;
     --primary-highlight-color: #61dafb;
 }

@@ -6,6 +6,10 @@
     min-height: 100vh;
 }
 
+.container{
+    position: relative;
+}
+
 .hero__name{
     display: block;
     font-size: 4rem;
@@ -19,9 +23,18 @@
     transition: filter 1s ease-in-out, transform 0.5s linear;
 }
 
-.hero__img{
+.container__translate{
+    display: block;
+    position: absolute;
+    top: 48%;
+    width: 100%;
+    animation: translate 6s infinite linear;
+}
+
+.container__load{
     animation: rotation 2s infinite linear;
-    margin: 4rem;
+    position: absolute;
+    top: 70%;
 }
 
 .hero__letter:hover{
