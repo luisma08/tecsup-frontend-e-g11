@@ -1,4 +1,4 @@
-@keyframes zoom{
+@keyframes zoom{ /*@keyframes -> propiedad de animacion "zoom"-> nombre de la funcion */
     from {
         transform: scale(1);
     }
