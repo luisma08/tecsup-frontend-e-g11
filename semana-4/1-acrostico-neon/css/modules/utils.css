@@ -3,5 +3,5 @@
 }
 
 .gap-sm{
-    gap: calc(var(--padding-section)*0.5);
+    gap: calc(var(--padding-section) * 0.5);
 }
