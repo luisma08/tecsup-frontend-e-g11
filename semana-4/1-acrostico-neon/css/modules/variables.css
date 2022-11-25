@@ -8,7 +8,7 @@
     --letter-color-2: #ff0697;
     --letter-color-3: #ff4d00;
     --letter-color-4: #ffe600;
-    --primary-font-family: serif;
+    --primary-font-family: 'Inconsolata', monospace;
     --max-width-container: 1024px;
     --padding-section: 1.5rem;
     --padding-container: 1rem;

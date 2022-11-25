@@ -33,15 +33,10 @@
     flex-direction: column;
 }
 
-@media (min-width:768px){
-    .f-elements--responsive{
-        flex-direction: row;
-    }
-}
-
 .section__name{
-    display: block;
+    display: flex;
     font-size: 4rem;
+    font-weight: 900;
     text-decoration: none;
     animation: zoom 1s ease-in-out 0s infinite alternate;
 }
@@ -88,4 +83,33 @@
 
 .section__letter:nth-child(4){
     color: var(--letter-color-4);
+}
+
+.section__verse{
+    font-weight: 600;
+    text-shadow: 0 0 0.0625rem var(--primary-highlight-color),
+    0 0 0.125rem var(--primary-highlight-color),
+    0 0 0.25rem var(--primary-highlight-color);
+}
+
+.section__verse::first-letter{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+@media (min-width: 768px){
+    .section__name{
+        font-size: 6rem;
+    }
+    .section__verse{
+        font-size: 2rem;
+    }
+
+    .section__verse::first-letter{
+        font-size: 2.5rem;
+    }
+
+    .f-elements--responsive{
+        flex-direction: row;
+    }
 }
