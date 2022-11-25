@@ -3,10 +3,10 @@
     padding-bottom: var(--padding-section);
   }
   
-  .section--hero{
+.section--hero{
     box-sizing: border-box;
     min-height: 100vh;
-  }
+}
   
 .container {
     max-width: var(--max-width-container);
@@ -37,13 +37,6 @@
     .f-elements--responsive{
         flex-direction: row;
     }
-}
-.section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
 .section__name{
