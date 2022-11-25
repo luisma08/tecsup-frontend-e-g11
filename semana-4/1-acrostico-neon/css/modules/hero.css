@@ -6,10 +6,6 @@
     min-height: 100vh;
 }
 
-.container{
-    position: relative;
-}
-
 .hero__name{
     display: block;
     font-size: 4rem;
@@ -21,35 +17,6 @@
     display: inline-block;
     position: relative;
     transition: filter 1s ease-in-out, transform 0.5s linear;
-}
-
-.container__translate{
-    display: block;
-    position: absolute;
-    top: 48%;
-    width: 100%;
-    animation: translate 6s infinite linear;
-}
-
-.container__load{
-    animation: rotation 2s infinite linear;
-    position: absolute;
-    top: 70%;
-}
-
-.hero__translate{
-    display: inline-block;
-    position: relative;
-    transition: filter 1s ease-in-out, transform 0.5s linear;
-}
-
-.hero__translate::after{
-    content: url('../../img/person-rowing-boat-1628.png');
-    position: absolute;
-    left: 0;
-    top: 87.5%;
-    filter: blur(0.125rem);
-    transform: rotateX(137.5deg);
 }
 
 .hero__letter:hover{
