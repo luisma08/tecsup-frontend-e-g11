@@ -4,4 +4,9 @@
     --third-theme-color:#003366;
     --primary-text-color:#fff;
     --primary-highlight-color: #61dafb;
+    --primary-font-family: serif;
+    --max-width-container: 1024px;
+    --padding-section: 1.5rem;
+    --padding-container: 1rem;
+    --primary-border-radius: 0.5rem;
 }
