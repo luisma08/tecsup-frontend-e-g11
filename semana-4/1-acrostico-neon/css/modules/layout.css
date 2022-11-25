@@ -1,4 +1,44 @@
-.hero{
+.section{
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+  }
+  
+  .section--hero{
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+  
+.container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    padding-left: var(--padding-container);
+    padding-right: var(--padding-container); 
+}
+
+.f-elements{
+    display: flex;
+}
+
+.f-elements--between{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.f-elements--center{
+    align-items: center;
+    justify-content: center;
+}
+
+.f-elements--responsive{
+    flex-direction: column;
+}
+
+@media (min-width:768px){
+    .f-elements--responsive{
+        flex-direction: row;
+    }
+}
+.section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,24 +46,24 @@
     min-height: 100vh;
 }
 
-.hero__name{
+.section__name{
     display: block;
     font-size: 4rem;
     text-decoration: none;
     animation: zoom 1s ease-in-out 0s infinite alternate;
 }
 
-.hero__letter{
+.section__letter{
     display: inline-block;
     position: relative;
     transition: filter 1s ease-in-out, transform 0.5s linear;
 }
 
-.hero__letter:hover{
+.section__letter:hover{
     filter: brightness(2.5);
 }
 
-.hero__letter::before{
+.section__letter::before{
     content: var(--letter);
     position: absolute;
     left: 0;
@@ -32,7 +72,7 @@
     transform: scale(1.125);
 }
 
-.hero__letter::after{
+.section__letter::after{
     content: var(--letter);
     position: absolute;
     left: 0;
@@ -41,18 +81,18 @@
     transform: rotateX(137.5deg);
 }
 
-.hero__letter:nth-child(1){
-    color: #00bef8;
+.section__letter:nth-child(1){
+    color: var(--letter-color-1);
 }
 
-.hero__letter:nth-child(2){
-    color: #ff0697;
+.section__letter:nth-child(2){
+    color: var(--letter-color-2);
 }
 
-.hero__letter:nth-child(3){
-    color: #ff4d00;
+.section__letter:nth-child(3){
+    color: var(--letter-color-3);
 }
 
-.hero__letter:nth-child(4){
-    color: #ffe600;
+.section__letter:nth-child(4){
+    color: var(--letter-color-4);
 }
