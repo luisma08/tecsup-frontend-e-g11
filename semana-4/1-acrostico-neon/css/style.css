@@ -8,6 +8,6 @@
     background-image: linear-gradient(to top,var(--third-theme-color) 42%,var(--primary-theme-color), var(--secundary-theme-color));
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
-    min-height: 100vh;
+    margin: 0;
 }
 
