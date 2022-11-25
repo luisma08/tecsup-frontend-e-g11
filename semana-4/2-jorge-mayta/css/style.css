@@ -4,6 +4,7 @@
 @import './modules/layout.css';
 @import './modules/list.css';
 @import './modules/utils.css';
+@import './modules/cards.css';
 
 .body{
     background-color: var(--primary-theme-color);
