@@ -11,6 +11,18 @@
   min-height: 100vh;
 }
 
+.section__hero-img{
+
+}
+
+.section__hero-technologies{
+
+}
+
+.section__hero-tech{
+
+}
+
 .container {
     max-width: var(--max-width-container);
     margin: 0 auto;
