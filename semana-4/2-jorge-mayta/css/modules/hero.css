@@ -30,6 +30,9 @@
 
 .section__hero-tech{
   position: absolute;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .section__hero-tech:nth-child(1){
