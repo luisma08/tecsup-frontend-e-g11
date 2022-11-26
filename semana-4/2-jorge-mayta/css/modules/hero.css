@@ -25,6 +25,7 @@
   bottom: 0;
   right: 0;
   margin: 0;
+  animation: t-rotate 10s linear infinite;
 }
 
 .section__hero-tech{
