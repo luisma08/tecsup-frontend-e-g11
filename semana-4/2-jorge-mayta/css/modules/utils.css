@@ -15,10 +15,14 @@
 }
 
 .gap-sm{
-    gap: calc(var(--padding-section)*0.5);
+    gap: calc(var(--padding-section) * 0.5);
 }
 .gap-md{
     gap: var(--padding-section);
+}
+
+.gap-lg{
+    gap: calc(var(--padding-section) * 2.5);
 }
 
 .p-relative{

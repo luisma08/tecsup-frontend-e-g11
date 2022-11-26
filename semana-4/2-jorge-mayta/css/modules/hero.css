@@ -30,7 +30,7 @@
 
 .section__hero-tech{
   position: absolute;
-  background-color: white;
+  background-color: #fff8;
   padding: 0.5rem;
   border-radius: 50%;
 }
@@ -58,3 +58,14 @@
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
 }
+
+@media (min-width:768px){
+    .section__hero-container{
+        max-width: 320px;
+      }
+
+    .section__hero-img{
+        width: 320px;
+        height: 320px;
+      }
+  }
