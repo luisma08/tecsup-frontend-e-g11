@@ -6,6 +6,7 @@
 @import './modules/utils.css';
 @import './modules/cards.css';
 @import './modules/buttons.css';
+@import './modules/hero.css';
 
 .body{
     background-color: var(--primary-theme-color);
