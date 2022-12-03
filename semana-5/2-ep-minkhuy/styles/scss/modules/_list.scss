@@ -1,0 +1,18 @@
+.list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__link{
+        display: flex;
+        background-color: var(--primary-highlight-color);
+        border-radius: var(--primary-border-radius);
+        text-decoration: none;
+        color: var(--primary-text-color);
+        padding: 0.25em 1em;
+    }
+    &__link:hover{
+        background-color: var(--primary-highlight-color);
+        color: var(--primary-theme-color);
+    }
+}
