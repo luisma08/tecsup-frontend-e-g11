@@ -1,3 +1,11 @@
+.f-elements {
+  display: flex;
+}
+.f-elements--header {
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header {
   position: fixed;
   z-index: 25;
@@ -24,7 +32,7 @@
 }
 .list__link {
   display: flex;
-  background-color: var(--secondary-highlight-color);
+  background-color: var(--secondary-theme-color);
   border-radius: var(--primary-border-radius);
   color: var(--primary-text-color);
   font-weight: 600;
@@ -34,7 +42,7 @@
 }
 .list__link:hover {
   background-color: var(--primary-highlight-color);
-  color: var(--reverse-primary-theme-color);
+  color: var(--reverse-primary-text-color);
 }
 
 /*# sourceMappingURL=fe.css.map */
