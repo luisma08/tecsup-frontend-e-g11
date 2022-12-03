@@ -1,5 +1,37 @@
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+.t-align-center {
+  text-align: center;
+}
+
+.f-direction-column {
+  flex-direction: column;
+}
+
 .gap-sm {
   gap: calc(var(--padding-section) * 0.25);
+}
+
+.section {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  box-sizing: border-box;
+}
+.section__title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+.section__subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+.section__text {
+  font-size: 1rem;
+  margin: 0;
 }
 
 .container {
@@ -15,6 +47,10 @@
 .f-elements--header {
   align-items: center;
   justify-content: space-between;
+}
+.f-elements--center {
+  align-items: center;
+  justify-content: center;
 }
 
 .header {

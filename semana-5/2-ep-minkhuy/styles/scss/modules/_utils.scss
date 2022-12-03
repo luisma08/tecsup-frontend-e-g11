@@ -1,3 +1,12 @@
+.min-h-100vh{
+    min-height: 100vh;
+}
+.t-align-center{
+    text-align: center;
+}
+.f-direction-column{
+    flex-direction: column;
+}
 .gap-sm{
     gap: calc(var(--padding-section) * 0.25);
 }
