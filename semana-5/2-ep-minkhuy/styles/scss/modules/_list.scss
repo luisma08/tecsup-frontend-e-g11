@@ -5,14 +5,17 @@
 
     &__link{
         display: flex;
-        background-color: var(--primary-highlight-color);
+        background-color: var(--secondary-highlight-color);
         border-radius: var(--primary-border-radius);
-        text-decoration: none;
         color: var(--primary-text-color);
+        font-weight: 600;
         padding: 0.25em 1em;
+        text-decoration: none;
+        transition: backgroud-color 0.25s, color 0.25s;
+        &:hover{
+            background-color: var(--primary-highlight-color);
+            color: var(--reverse-primary-theme-color);
+        }
     }
-    &__link:hover{
-        background-color: var(--primary-highlight-color);
-        color: var(--primary-theme-color);
-    }
+    
 }
