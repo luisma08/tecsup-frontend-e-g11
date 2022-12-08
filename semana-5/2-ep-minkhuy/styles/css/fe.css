@@ -111,8 +111,6 @@
     background-color: transparent;
     width: auto;
     height: auto;
-    opacity: 1;
-    pointer-events: auto;
   }
 }
 .list--header-show {
