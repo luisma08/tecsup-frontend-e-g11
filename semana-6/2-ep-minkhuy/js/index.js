@@ -20,3 +20,19 @@ iconClose.addEventListener('click', () => {
     //listHeader.style.opacity = '0';
     listHeader.classList.remove('list--header-show');
 });
+
+const comida = () => {
+    if(26>=18){
+        let name;
+        name = 'Jorge';
+        const years = 18;
+        console.log(name);
+        name = 'Luis';
+        console.log(name);
+        console.log(years);
+        console.log('Nombre: ' + name + ', Años: ' + years);
+        console.log(`Nombre: ${name}, Años: ${years}`);
+    }
+    console.log(name);
+};
+comida();
