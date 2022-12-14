@@ -9,29 +9,31 @@
 </head>
 <body class="bg-dark text-light">
     <main>
-        <section>
-            <div class="container">
-                <h1>Calculadora Boostrap</h1>
-                <form action="" id="calculatorform">
-                    <div class="form-floating mb-3">
-                        <input type="number" class="form-control bg-transparent text-light" id="number1" placeholder="Numero 1">
+        <section class="py-5">
+            <div class="container d-flex flex-column gap-4">
+                <h1 class="text-center text-info m-0">Calculadora Boostrap</h1>
+                <form action="" id="calculatorform" class="d-flex flex-column gap-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control bg-transparent text-light" id="number1" placeholder="Numero 1">
                         <label for="number1">Numero 1</label>
                       </div>
-                      <div class="form-floating mb-3">
+                      <div class="form-floating">
                         <select class="form-select bg-dark text-light" id="operator" aria-label="Operador de la calculadora">
                           <option selected>Seleccionar operador</option>
                           <option value="-">-</option>
                           <option value="+">+</option>
+                          <option value="*">*</option>
                           <option value="/">/</option>
                         </select>
                         <label for="floatingSelect">Works with selects</label>
                       </div>
-                      <div class="form-floating mb-3">
-                        <input type="number" class="form-control bg-transparent text-light" id="number2" placeholder="Numero 2">
+                      <div class="form-floating">
+                        <input type="text" class="form-control bg-transparent text-light" id="number2" placeholder="Numero 2">
                         <label for="number2">Numero 2</label>
                       </div>
                       <button class="btn btn-outline-light btn-large w-100" id="button">Calcular</button>
                 </form>
+                <h2 class="badge text-bg-info fs-2 m-0" id="resultContainer"></h2>
             </div>
         </section>
     </main>

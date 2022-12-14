@@ -5,18 +5,27 @@ const documentReady = () => {
 
     const calculate = (e)=>{
         e.preventDefault();
-        const number1= document.getElementById('number1').value;
+        const number1= parseFloat(document.getElementById('number1').value);
         const operator= document.getElementById('operator').value;
-        const number2= document.getElementById('number2').value;
-        let calcular;
-        if(operator == "-"){
-            calcular = parseFloat(number1) - parseFloat(number2);
-        } else if(operator == "+"){
-            calcular = parseFloat(number1) + parseFloat(number2);
-        } else{
-            calcular = parseFloat(number1) / parseFloat(number2);
+        const number2= parseFloat(document.getElementById('number2').value);
+        const resultContainer=document.getElementById('resultContainer');
+
+        let result;
+        switch (operator){
+            case '-':
+                result = number1 - number2;
+                break;
+            case '+':
+                result = number1 + number2;
+                break;
+            case '*':
+                result = number1 * number2;
+                break;
+            case '/':
+                result = number1 / number2;
+                break;
         }
-        alert(calcular);
+        resultContainer.innerText = result;
     };
     calculatorform.addEventListener('submit', calculate);
 };
