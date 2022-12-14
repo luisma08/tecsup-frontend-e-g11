@@ -25,6 +25,7 @@
 .hero__title{
     font-size: 2rem;
     margin: 0;
+    text-align: center;
 }
 
 .hero__img{
