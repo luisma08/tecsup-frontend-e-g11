@@ -61,3 +61,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.d-none{
+    display: none;
+}
+
+.emoji::before{
+    content: '😘';
+}
+
+.emoji::after{
+    content: ' I love you pipipi';
+}
