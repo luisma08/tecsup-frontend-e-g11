@@ -1,7 +1,8 @@
 'use strict'
 
 const documentReady = () => {
-    const pokemons = []
+    const POKEMONS_CRUS_DATA = 'pokemons-crud';
+    const pokemons = JSON.parse(localStorage.getItem(POKEMONS_CRUS_DATA)) ?? [];
     const formPokemon = document.getElementById('formPokemon');
     /* `Plantillas literales` */
 
@@ -15,6 +16,7 @@ const documentReady = () => {
         const special = documentFormPokemon.special.value;
         const imgUrl = documentFormPokemon.imgUrl.value;
         pokemons.push({name, type, hp, attack, special, imgUrl});
+        localStorage.setItem('pokemons-crud', JSON.stringify(pokemons));
         readPokemons();
     };
 
@@ -42,7 +44,7 @@ const documentReady = () => {
             `;
         });
     };
-
+    readPokemons();
     formPokemon.addEventListener('submit', createPokemon);
 };
 
