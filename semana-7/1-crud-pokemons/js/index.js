@@ -36,8 +36,12 @@ const readPokemons = () => {
             alt="${name}" class="img-fluid" style="max-width: 128px;" />
         </td>
         <td>
+            <button 
+            class="btn btn-info m-1" onclick="readPokemon(${index})">
+            ✏
+          </button>
           <button 
-            class="btn btn-danger" onclick="deletePokemon(${index})">
+            class="btn btn-danger m-1" onclick="deletePokemon(${index})">
             🗑
           </button>
         </td>
@@ -46,22 +50,30 @@ const readPokemons = () => {
   });
 };
 
+const readPokemon = (index) => {
+    const pokemon = pokemons.find((_, i) => {
+    return i === index;
+    });
+    /*const pokemon = pokemons.slice(index, index + 1)[0];*/
+    console.log(pokemon);
+}
+
 const deletePokemon = (index) => {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
-          confirmButton: 'btn btn-success',
-          cancelButton: 'btn btn-danger'
+          confirmButton: 'btn btn-success mx-1',
+          cancelButton: 'btn btn-danger mx-1'
         },
         buttonsStyling: false
       })
       
       swalWithBootstrapButtons.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        title: 'Estas seguro?',
+        text: "¡No podrás revertir esto!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Yes, delete it!',
-        cancelButtonText: 'No, cancel!',
+        confirmButtonText: 'Si, eliminar!',
+        cancelButtonText: 'No, cancelar!',
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
@@ -69,8 +81,8 @@ const deletePokemon = (index) => {
             localStorage.setItem(POKEMONS_CRUD_DATA, JSON.stringify(pokemons));
             readPokemons();
           swalWithBootstrapButtons.fire(
-            'Deleted!',
-            'Your file has been deleted.',
+            'Eliminado!',
+            'Su archivo ha sido eliminado.',
             'success'
           )
         } else if (
@@ -78,8 +90,8 @@ const deletePokemon = (index) => {
           result.dismiss === Swal.DismissReason.cancel
         ) {
           swalWithBootstrapButtons.fire(
-            'Cancelled',
-            'Your imaginary file is safe :)',
+            'Cancelar',
+            'Tu archivo imaginario está a salvo :)',
             'error'
           )
         }
