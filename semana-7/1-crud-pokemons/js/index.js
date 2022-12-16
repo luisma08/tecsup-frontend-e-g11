@@ -21,7 +21,7 @@ const readPokemons = () => {
   const tBodyPokemons = document.getElementById('tBodyPokemons');
   tBodyPokemons.innerHTML = '';
   pokemons.forEach((element, index) => {
-    const { name, type, hp, attack, special, imgUrl } = element;
+    const { name, type, hp, attack, special, imgUrl } = element;/** Desectructurar elementos {} par acceder a ellos */
     tBodyPokemons.innerHTML += `
       <tr>
         <td>${index + 1}</td>
@@ -54,8 +54,30 @@ const readPokemon = (index) => {
     const pokemon = pokemons.find((_, i) => {
     return i === index;
     });
-    /*const pokemon = pokemons.slice(index, index + 1)[0];*/
-    console.log(pokemon);
+    
+    //const pokemon = pokemons.slice(index, index + 1)[0];
+    //console.log(pokemon);
+    //const documentFormPokemon = getElementById['formPokemon'];
+
+    console.log(pokemon.name);
+
+    const documentFormPokemon = document.forms['formPokemon'];
+    const name = documentFormPokemon.name;
+    const type = documentFormPokemon.type;
+    const hp = documentFormPokemon.hp;
+    const attack = documentFormPokemon.attack;
+    const special = documentFormPokemon.special;
+    const imgUrl = documentFormPokemon.imgUrl;
+    const button = document.getElementById('button');
+
+    name.value = pokemon.name;
+    type.value = pokemon.type;
+    hp.value = pokemon.hp;
+    attack.value = pokemon.hp;
+    special.value = pokemon.special;
+    imgUrl.value = pokemon.imgUrl;
+    button.innerText = 'Actualizar';
+    
 }
 
 const deletePokemon = (index) => {
