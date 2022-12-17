@@ -1,6 +1,12 @@
-const swiper = new Swiper('.swiper', {
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+
+new Swiper('.swiper', {
     // Optional parameters
-    direction: 'vertical',
+    autoplay: {
+        delay: 2000,
+      },
+
+    direction: 'horizontal',
     loop: true,
   
     // If we need pagination
