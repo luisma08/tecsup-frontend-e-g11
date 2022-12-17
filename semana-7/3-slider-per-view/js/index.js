@@ -23,22 +23,22 @@ var swiper = new Swiper(".mySwiper", {
         // when window width is >= 320px
         320: {
           slidesPerView: 1,
-          spaceBetween: 20,
+          spaceBetween: 10,
         },
 
         640: {
           slidesPerView: 2,
-          spaceBetween: 40,
+          spaceBetween: 20,
         },
 
         768: {
             slidesPerView: 3,
-            spaceBetween: 60,
+            spaceBetween: 30,
         },
 
         1024: {
             slidesPerView: 4,
-            spaceBetween: 80,
+            spaceBetween: 40,
         }
       }
   });
