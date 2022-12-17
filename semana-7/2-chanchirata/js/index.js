@@ -3,7 +3,7 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.brow
 new Swiper('.swiper', {
     // Optional parameters
     autoplay: {
-        delay: 2000,
+        delay: 500,
       },
 
     direction: 'horizontal',
