@@ -59,7 +59,7 @@ const readPokemon = (index) => {
     //console.log(pokemon);
     //const documentFormPokemon = getElementById['formPokemon'];
 
-    console.log(pokemon.name);
+    //console.log(pokemon.name);
 
     const documentFormPokemon = document.forms['formPokemon'];
     const name = documentFormPokemon.name;
@@ -73,11 +73,10 @@ const readPokemon = (index) => {
     name.value = pokemon.name;
     type.value = pokemon.type;
     hp.value = pokemon.hp;
-    attack.value = pokemon.hp;
+    attack.value = pokemon.attack;
     special.value = pokemon.special;
     imgUrl.value = pokemon.imgUrl;
     button.innerText = 'Actualizar';
-    
 }
 
 const deletePokemon = (index) => {
