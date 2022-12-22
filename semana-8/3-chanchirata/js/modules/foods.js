@@ -1,30 +1,8 @@
-const comidas = [
-    {
-      "id": 1,
-      "name": "Ají de Gallina",
-      "description": "El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la costa, ​ que consiste en un ají o crema espesa con pechuga de gallina deshilachada. Esta crema es servida con papas cocidas, y en ocasiones con arroz blanco. Es común reemplazar la gallina por pollo.",
-      "urlImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ají_de_gallina.jpg/800px-Ají_de_gallina.jpg",
-      "urlRecipe": "https://www.recetasnestle.com.pe/recetas/aji-de-gallina-2"
-    },
-    {
-      "id": 2,
-      "name": "Lomo Saltado",
-      "description": "El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la costa, ​ que consiste en un ají o crema espesa con pechuga de gallina deshilachada. Esta crema es servida con papas cocidas, y en ocasiones con arroz blanco. Es común reemplazar la gallina por pollo.",
-      "urlImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ají_de_gallina.jpg/800px-Ají_de_gallina.jpg",
-      "urlRecipe": "https://www.recetasnestle.com.pe/recetas/aji-de-gallina-2"
-    },
-    {
-      "id": 3,
-      "name": "Chaufa",
-      "description": "El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la costa, ​ que consiste en un ají o crema espesa con pechuga de gallina deshilachada. Esta crema es servida con papas cocidas, y en ocasiones con arroz blanco. Es común reemplazar la gallina por pollo.",
-      "urlImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ají_de_gallina.jpg/800px-Ají_de_gallina.jpg",
-      "urlRecipe": "https://www.recetasnestle.com.pe/recetas/aji-de-gallina-2"
-    }
-  ];
-  
-  const foods = () => {
+
+  const foods = ({ foods }) => {
     const foodsContainer = document.getElementById('foodsContainer');
-    comidas.forEach((element) => {
+
+    [...foods].forEach((element) => {
         foodsContainer.innerHTML += `
         <div class="col-md-4" key=${element.id}>
           <div class="card bg-dark border border-2 border-light border-opacity-25 mx-auto"
@@ -40,6 +18,10 @@ const comidas = [
         </div>
       `;
     });
-  };
+  }
+  
+  /*const foods = () => {
+    
+  };*/
   
   export default foods;
