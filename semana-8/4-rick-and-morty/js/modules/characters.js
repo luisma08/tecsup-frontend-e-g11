@@ -1,6 +1,6 @@
 
-  const foods = ({ foods }) => {
-    const foodsContainer = document.getElementById('foodsContainer');
+  const characters = ({ foods }) => {
+    const foodsContainer = document.getElementById('characterContainer');
 
     [...foods].forEach((element) => {
         const { id, name, description, urlImage, urlRecipe } = element;
@@ -25,4 +25,4 @@
     
   };*/
   
-  export default foods;
+  export default characters;
