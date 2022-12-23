@@ -1,10 +1,11 @@
 
   const characters = ({ results }) => {
-    const foodsContainer = document.getElementById('characterContainer');
+    const charactersContainer = document.getElementById('characterContainer');
+    charactersContainer.innerHTML = '';
 
     [...results].forEach((element) => {
         const { id, name, status, species, type, gender, origin, location, image } = element;
-        foodsContainer.innerHTML += `
+        charactersContainer.innerHTML += `
         <div class="col-md-4" key=${id}>
           <div class="card bg-dark border border-2 border-light border-opacity-25 h-100 mx-auto"
             style="width: min(100%, 18rem);">

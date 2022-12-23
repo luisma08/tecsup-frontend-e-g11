@@ -4,8 +4,11 @@ import characters from "./modules/characters.js";
 
 const documetReady = () => {
     //Obtener dato de forma asincrona
+    const previousCharacters = document.getElementById('previousCharacters');
+    const nextCharacters = document.getElementById('nextCharacters');
+    let page = 1;
     
-    const fetchApi = async () => {
+    const fetchApi = async (page) => {
         //await esperar para obtener el dato
         /*
         const response = await fetch('https://rickandmortyapi.com/api/character/?page=1');//End point
@@ -27,15 +30,24 @@ const documetReady = () => {
         });
         */
        try {
-            const { data } = await axios.get('https://rickandmortyapi.com/api/character/?page=1');
+            const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`);
             characters(data);
+            console.log(data);
        } catch (error) {
             console.log(error);
        } finally {
-        console.log('Se obtuvo el recurso');
+            window.scrollTo(0, 0);
        }
     };
+
+    previousCharacters.addEventListener('click', () => {
+        fetchApi(--page);
+    });
+
+    nextCharacters.addEventListener('click', () => {
+        fetchApi(++page);
+    });
     
-    fetchApi();
+    fetchApi(page);
 };
 document.addEventListener('DOMContentLoaded', documetReady);
