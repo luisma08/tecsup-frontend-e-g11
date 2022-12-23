@@ -31,9 +31,13 @@ const documetReady = () => {
         */
        if(page == 1){
             previousCharacters.setAttribute('disabled', true);
+            previousCharacters.classList.add('bg-dark', 'text-light');
        } else if(page == 5){
             nextCharacters.setAttribute('disabled', true);
+            nextCharacters.classList.add('bg-dark', 'text-light');
        } else {
+            previousCharacters.classList.remove('bg-dark', 'text-light');
+            nextCharacters.classList.remove('bg-dark', 'text-light');
             previousCharacters.removeAttribute('disabled');
             nextCharacters.removeAttribute('disabled');
        }
@@ -57,7 +61,7 @@ const documetReady = () => {
     nextCharacters.addEventListener('click', () => {
         fetchApi(++page);
     });
-    
+
     fetchApi(page);
 };
 document.addEventListener('DOMContentLoaded', documetReady);
