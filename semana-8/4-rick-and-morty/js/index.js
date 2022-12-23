@@ -29,17 +29,27 @@ const documetReady = () => {
             // always executed
         });
         */
+       if(page == 1){
+            previousCharacters.setAttribute('disabled', true);
+       } else if(page == 5){
+            nextCharacters.setAttribute('disabled', true);
+       } else {
+            previousCharacters.removeAttribute('disabled');
+            nextCharacters.removeAttribute('disabled');
+       }
+
        try {
             const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`);
             characters(data);
             console.log(data);
+            console.log(page);
        } catch (error) {
             console.log(error);
        } finally {
             window.scrollTo(0, 0);
        }
     };
-
+   
     previousCharacters.addEventListener('click', () => {
         fetchApi(--page);
     });
