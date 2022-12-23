@@ -3,17 +3,29 @@
     const foodsContainer = document.getElementById('characterContainer');
 
     [...results].forEach((element) => {
-        const { id, name, location, image, url } = element;
+        const { id, name, status, species, type, gender, origin, location, image } = element;
         foodsContainer.innerHTML += `
         <div class="col-md-4" key=${id}>
-          <div class="card bg-dark border border-2 border-light border-opacity-25 mx-auto"
+          <div class="card bg-dark border border-2 border-light border-opacity-25 h-100 mx-auto"
             style="width: min(100%, 18rem);">
-            <img src="${image}" class="card-img-top" alt="Anime 1" width="256"
-              height="144" style="width: 100%; height: 192px; object-fit: cover;">
+            <div class="card-header text-center">
+              ${name}
+            </div>
             <div class="card-body">
-              <h5 class="card-title">${name}</h5>
-              <p class="card-text">${location.name}</p>
-              <a href="${url}" class="btn btn-primary">Api</a>
+              <img src="${image}" class="card-img-top" alt="Anime 1" width="256" height="144"
+                style="width: 100%; height: 192px; object-fit: cover; border-radius: 0.5rem"/>
+              <h5 class="card-title mt-2">${name}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">${type || 'Chanchito'}</h6>
+              <p class="card-text">
+                <span class="badge text-bg-info">${status}</span>
+                <span class="badge text-bg-primary">${species}</span>
+                <span class="badge text-bg-secondary">${gender}</span>
+              </p>
+              <p class="card-text"><span class="text-info fw-bold">Origen:</span> ${origin.name}</p>
+              <p class="card-text"><span class="text-info fw-bold">Ubicación:</span> ${location.name}</p>
+            </div>
+            <div class="card-footer text-center">
+              <a href="${image}" target="_blank" rel="noopener noreferrer" class="card-link">Descargar imagen</a>
             </div>
           </div>
         </div>
