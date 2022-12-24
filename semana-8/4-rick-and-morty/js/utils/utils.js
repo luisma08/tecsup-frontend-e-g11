@@ -1,10 +1,11 @@
-const renderCharacters = ({ results }) => {
-    const charactersContainer = document.getElementById('characterContainer');
+export const renderCharacters = (data) => {
+    const charactersContainer = document.getElementById('charactersContainer');
     charactersContainer.innerHTML = '';
-
-    [...results].forEach((element) => {
-        const { id, name, status, species, type, gender, origin, location, image } = element;
-        charactersContainer.innerHTML += `
+  
+    data.forEach((element) => {
+      const { id, name, status, species, type, gender, origin, location, image } = element;
+  
+      charactersContainer.innerHTML += `
         <div class="col-md-4" key=${id}>
           <div class="card bg-dark border border-2 border-light border-opacity-25 h-100 mx-auto"
             style="width: min(100%, 18rem);">
@@ -32,5 +33,32 @@ const renderCharacters = ({ results }) => {
       `;
     });
   };
+  
+  export const fetchReadCharacters = async (page = 1, name = '') => {
+    const previousCharacters = document.getElementById('previousCharacters');
+    const nextCharacters = document.getElementById('nextCharacters');
 
-  export default renderCharacters;
+    try {
+
+        if(page == 1){
+            previousCharacters.setAttribute('disabled', true);
+            previousCharacters.classList.add('text-light', 'bg-dark');
+        } else if (page == 5){
+            nextCharacters.setAttribute('disabled', true);
+            nextCharacters.classList.add('text-light', 'bg-dark');
+        } else {
+            previousCharacters.removeAttribute('disabled');
+            nextCharacters.removeAttribute('disabled');
+            previousCharacters.classList.remove('text-light', 'bg-dark');
+            nextCharacters.classList.remove('text-light', 'bg-dark');
+        }
+
+      const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}&name=${name}`);
+      return data.results;
+      
+    } catch (error) {
+      console.log(error);
+    } finally {
+      window.scrollTo(0, 0);
+    }
+  };

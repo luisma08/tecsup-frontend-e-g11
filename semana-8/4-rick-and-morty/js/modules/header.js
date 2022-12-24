@@ -1,27 +1,29 @@
-import renderCharacters from "../utils/utils.js";
+import { fetchReadCharacters, renderCharacters } from "../utils/utils.js";
 
 const header = () => {
-    const searchForm = document.getElementById('searchForm');
+  const searchForm = document.getElementById('searchForm');
+  const previousCharacters = document.getElementById('previousCharacters');
+  const nextCharacters = document.getElementById('nextCharacters');
+  let page = 1;
 
-    const searchCharacters = (e) => {
-        e.preventDefault();
-        const name = searchForm.name.value;
-        fetchApi(name);
-    };
+  const searchCharacters = async (e) => {
+    e.preventDefault();
+    const name = searchForm.name.value;
+    const data = await fetchReadCharacters(page, name);
+    renderCharacters(data);
 
-    const fetchApi = async (name) => {
+    previousCharacters.addEventListener('click', async () => {
+        const data = await fetchReadCharacters(--page, name);
+        renderCharacters(data);
+      });
+    
+      nextCharacters.addEventListener('click', async () => {
+        const data = await fetchReadCharacters(++page, name);
+        renderCharacters(data);
+      });
+  };
 
-       try {
-            const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?name=${name}`);
-            renderCharacters(data);
-       } catch (error) {
-            console.log(error);
-       } finally {
-            window.scrollTo(0, 0);
-       }
-    };
-
-    searchForm.addEventListener('submit', searchCharacters);
+  searchForm.addEventListener('submit', searchCharacters);
 };
 
 export default header;
