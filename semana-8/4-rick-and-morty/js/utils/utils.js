@@ -33,6 +33,13 @@ export const renderCharacters = (data) => {
       `;
     });
   };
+
+  /*export const pagination = ({ info }) => {
+    const previousCharacters = document.getElementById('previousCharacters');
+    const nextCharacters = document.getElementById('nextCharacters');
+    const pages = info['pages'];
+    console.log(pages);
+  };*/
   
   export const fetchReadCharacters = async (page = 1, name = '') => {
     const previousCharacters = document.getElementById('previousCharacters');
@@ -40,10 +47,13 @@ export const renderCharacters = (data) => {
 
     try {
 
+        const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}&name=${name}`);
+        const pages = data.info['pages'];
+
         if(page == 1){
             previousCharacters.setAttribute('disabled', true);
             previousCharacters.classList.add('text-light', 'bg-dark');
-        } else if (page == 5){
+        } else if (page == pages){
             nextCharacters.setAttribute('disabled', true);
             nextCharacters.classList.add('text-light', 'bg-dark');
         } else {
@@ -52,10 +62,11 @@ export const renderCharacters = (data) => {
             previousCharacters.classList.remove('text-light', 'bg-dark');
             nextCharacters.classList.remove('text-light', 'bg-dark');
         }
+        console.log('Numero de paginas en total');
+        console.log(pages);
+        console.log("numero de pagina: " + page);
+        return data.results;
 
-      const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}&name=${name}`);
-      return data.results;
-      
     } catch (error) {
       console.log(error);
     } finally {

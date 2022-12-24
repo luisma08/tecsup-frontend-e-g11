@@ -4,14 +4,15 @@ const header = () => {
   const searchForm = document.getElementById('searchForm');
   const previousCharacters = document.getElementById('previousCharacters');
   const nextCharacters = document.getElementById('nextCharacters');
-  let page = 1;
+  let page=1;
 
   const searchCharacters = async (e) => {
     e.preventDefault();
     const name = searchForm.name.value;
     const data = await fetchReadCharacters(page, name);
     renderCharacters(data);
-
+    //pagination(data);
+    
     previousCharacters.addEventListener('click', async () => {
         const data = await fetchReadCharacters(--page, name);
         renderCharacters(data);
@@ -22,7 +23,6 @@ const header = () => {
         renderCharacters(data);
       });
   };
-
   searchForm.addEventListener('submit', searchCharacters);
 };
 

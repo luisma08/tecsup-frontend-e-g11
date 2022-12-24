@@ -17,7 +17,7 @@ const characters = async () => {
 
   const data = await fetchReadCharacters(page);
   renderCharacters(data);
-
+  //pagination(data);
 };
 
 export default characters;
