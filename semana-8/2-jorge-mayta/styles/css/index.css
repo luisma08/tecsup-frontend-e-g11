@@ -6,3 +6,12 @@
     font-family: var(--primary-font-family);
     margin: 0;
 }
+
+.body--light {
+    --primary-theme-color: #fff;
+    --secondary-theme-color: #eee;
+    --primary-text-color: #000;
+    --secondary-text-color: #777;
+    --primary-shadow-color: #00000080;
+    --secondary-shadow-color: #00000040;
+  }
