@@ -1,6 +1,7 @@
 'use strict';
 
 import characters from "./modules/characters.js";
+import header from "./modules/header.js";
 
 const documetReady = () => {
     //Obtener dato de forma asincrona
@@ -63,5 +64,6 @@ const documetReady = () => {
     });
 
     fetchApi(page);
+    header();
 };
 document.addEventListener('DOMContentLoaded', documetReady);
