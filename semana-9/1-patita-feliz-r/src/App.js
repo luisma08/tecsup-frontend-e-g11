@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/sections/Header.jsx';
 import Footer from './components/sections/Footer.jsx';
+import Appointments from './pages/Appointments.jsx';
 
 function App() {
   const company = {
@@ -16,6 +17,9 @@ function App() {
   return (
     <>
       <Header company={company}/>
+      <main>
+        <Appointments />
+      </main>
       <Footer credits={credits}/>
     </>
   );
