@@ -1,8 +1,9 @@
 import './App.css';
+import Header from './components/sections/header';
 
 function App() {
   return (
-    <h1>Patito Feliz 🦆</h1>
+    <Header />
   );
 }
 
