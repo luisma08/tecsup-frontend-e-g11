@@ -1,6 +1,6 @@
 import './App.css';
-import Header from './components/sections/header';
-import Footer from './components/sections/footer';
+import Header from './components/sections/Header.jsx';
+import Footer from './components/sections/Footer.jsx';
 
 function App() {
   const company = {
