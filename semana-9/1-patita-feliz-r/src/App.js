@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/sections/Header.jsx';
 import Footer from './components/sections/Footer.jsx';
-import Appointments from './pages/Appointments.jsx';
+import Appointments from './pages/Appointments';
 
 function App() {
   const company = {
