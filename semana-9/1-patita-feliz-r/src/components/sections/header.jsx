@@ -1,7 +1,10 @@
 const Header = () => {
     return (
-        <header>
-            <h1>Patito Feliz 🦆</h1>
+        <header className="py-3">
+            <div className="container d-flex flex-column gap-1">
+                <h2 className="text-info text-center fs-2 m-0">Patito Feliz 🦆</h2>
+                <h1 className="text-primary text-center fs-5 m-0">La mejor veterinaria del Peru</h1>
+            </div>
         </header>
     );
 };
