@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AppointmentsForm = () => {
+const AppointmentsForm = ({ appointments, setAppointments }) => {
 
     const [appointmentsForm, setAppointmentForm] = useState({
         mascota: '',
@@ -17,10 +17,19 @@ const AppointmentsForm = () => {
         })
     };
 
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setAppointments([
+        ...appointments,
+        appointmentsForm
+      ]);
+      console.log(...appointments);
+    };
+
     return ( 
         <div className="d-flex flex-column gap-3">
       <h3 className="text-center m-0">🐶 Crear Cita🐶</h3>
-      <form className="text-dark">
+      <form className="text-dark" onSubmit={handleSubmit}>
         <div className="form-floating mb-3">
           <input
             type="text"
@@ -73,13 +82,6 @@ const AppointmentsForm = () => {
         </div>
         <button className="btn btn-info w-100 fw-bold">Crear</button>
       </form>
-      <ul>
-            <li>{appointmentsForm.mascota}</li>
-            <li>{appointmentsForm.propietario}</li>
-            <li>{appointmentsForm.fecha}</li>
-            <li>{appointmentsForm.hora}</li>
-            <li>{appointmentsForm.sintomas}</li>
-        </ul>
     </div>
      );
 }
