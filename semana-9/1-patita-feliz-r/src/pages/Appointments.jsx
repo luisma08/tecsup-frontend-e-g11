@@ -6,7 +6,7 @@ const Appointments = () => {
     const [appointments, setAppointments] = useState([]);
     return (
         <section className="py-4">
-            <div className="container d-flex justify-content-between">
+            <div className="container">
                 <AppointmentsForm 
                     appointments={appointments}
                     setAppointments={setAppointments}
