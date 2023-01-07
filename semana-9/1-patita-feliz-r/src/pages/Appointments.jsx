@@ -6,13 +6,14 @@ const Appointments = () => {
     const [appointments, setAppointments] = useState([]);
     return (
         <section className="py-4">
-            <div className="container">
+            <div className="container row mx-auto g-4">
                 <AppointmentsForm 
                     appointments={appointments}
                     setAppointments={setAppointments}
                 />
                 <AppointmentsCards 
                     appointments={appointments}
+                    setAppointments={setAppointments}
                 />
             </div>
         </section>
