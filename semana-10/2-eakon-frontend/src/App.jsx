@@ -1,8 +1,9 @@
 import './App.css'
+import Header from './components/sections/Header'
 
 function App() {
   return (
-    <h1>EAKON</h1>
+    <Header />
   )
 }
 
