@@ -1,0 +1,15 @@
+.f-elements{
+    display: flex;
+
+    &--header{
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--center{
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+}
