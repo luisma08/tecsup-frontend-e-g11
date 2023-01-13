@@ -25,6 +25,16 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
+              <div className="f-elements f-elements--center">
+                <select name="" id="">
+                    <option value="value1">🌑</option>
+                    <option value="value2">☀</option>
+                    <option value="value3">💻</option>
+                </select>
+                <button className='icon'>
+                    🍔
+                </button>
+              </div>
             </div>
           </nav>
         </header>
