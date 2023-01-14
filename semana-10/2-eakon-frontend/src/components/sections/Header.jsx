@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logoEAKON from '../../assets/img/logo-eakon.webp';
 
 const Header = () => {
@@ -29,18 +29,28 @@ const Header = () => {
               ref={modal}
               onClick={removeModal}
               >
-                <ul className="list list--header">
+                <ul className="list list--header" 
+                onClick={e => e.stopPropagation()}
+                >
                   <li>
-                    <Link to="/productos" className="list__link">Productos</Link>
+                    <NavLink to="/productos" 
+                    className={({ isActive }) => isActive ? "list__link list__link--active" : "list__link"}
+                    onClick={removeModal}>Productos</NavLink>
                   </li>
                   <li>
-                    <Link to="/servicios" className="list__link">Servicios</Link>
+                    <NavLink to="/servicios" 
+                    className={({ isActive }) => isActive ? "list__link list__link--active" : "list__link"}
+                    onClick={removeModal}>Servicios</NavLink>
                   </li>
                   <li>
-                    <Link to="/nosotros" className="list__link">Nosotros</Link>
+                    <NavLink to="/nosotros" 
+                    className={({ isActive }) => isActive ? "list__link list__link--active" : "list__link"}
+                    onClick={removeModal}>Nosotros</NavLink>
                   </li>
                   <li>
-                    <Link to="/contacto" className="list__link">Contacto</Link>
+                    <NavLink to="/contacto" 
+                    className={({ isActive }) => isActive ? "list__link list__link--active" : "list__link"}
+                    onClick={removeModal}>Contacto</NavLink>
                   </li>
                   <li className='icon icon--close' onClick={removeModal}>
                     ❌
