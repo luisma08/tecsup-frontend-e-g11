@@ -7,12 +7,12 @@ const Header = () => {
     const modal = useRef();
 
     const showModal = () => {
-      header.current.classList.add('header--menu');
+      header.current.classList.add('header--move');
       modal.current.classList.add('modal--show');
     }
 
     const removeModal = () => {
-      header.current.classList.remove('header--menu');
+      header.current.classList.remove('header--move');
       modal.current.classList.remove('modal--show');
     }
 
@@ -41,6 +41,9 @@ const Header = () => {
                   </li>
                   <li>
                     <Link to="/contacto" className="list__link">Contacto</Link>
+                  </li>
+                  <li className='icon icon--close' onClick={removeModal}>
+                    ❌
                   </li>
                 </ul>
               </div>
