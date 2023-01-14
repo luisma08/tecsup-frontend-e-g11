@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { BsList, BsXCircle } from "react-icons/bs";
 import logoEAKON from '../../assets/img/logo-eakon.webp';
 
 const Header = () => {
@@ -53,7 +54,7 @@ const Header = () => {
                     onClick={removeModal}>Contacto</NavLink>
                   </li>
                   <li className='icon icon--close' onClick={removeModal}>
-                    ❌
+                    <BsXCircle />
                   </li>
                 </ul>
               </div>
@@ -64,7 +65,7 @@ const Header = () => {
                     <option value="value3">💻</option>
                 </select>
                 <button className='icon' onClick={showModal}>
-                    🍔
+                    <BsList />
                 </button>
               </div>
             </div>
