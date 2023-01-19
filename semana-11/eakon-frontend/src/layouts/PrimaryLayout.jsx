@@ -5,7 +5,7 @@ const PrimaryLayout = () => {
   return (
     <>
       <Header />
-      <main>
+      <main style={{padding: '8rem 0'}}>
         <Outlet />
       </main>
     </>
