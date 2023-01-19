@@ -1,20 +1,27 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { BsList, BsXCircle } from "react-icons/bs";
 import { Link, NavLink } from 'react-router-dom';
 import logoEAKON from '../../assets/img/logo-eakon.webp';
 
 const Header = () => {
-
   const header = useRef();
   const modal = useRef();
 
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ?? '');
+
+  const selectTheme = (e) => {
+    document.documentElement.className = e.target.value;
+    localStorage.setItem('theme', e.target.value);
+    setTheme(e.target.value);
+  };
+
   const showMenu = () => {
-    header.current.classList.add('right-50');
+    header.current.classList.add('header--menu');
     modal.current.classList.add('modal--show');
   };
 
   const hideMenu = () => {
-    header.current.classList.remove('right-50');
+    header.current.classList.remove('header--menu');
     modal.current.classList.remove('modal--show');
   };
 
@@ -82,11 +89,15 @@ const Header = () => {
             </ul>
           </div>
           <div className="f-elements f-elements--center">
-            {/* <select>
-              <option value="value1">🌚</option>
-              <option value="value2">🌞</option>
-              <option value="value3">💻</option>
-            </select> */}
+            <select
+              className="select select--theme"
+              onChange={selectTheme}
+              value={theme}
+            >
+              <option value="system">💻</option>
+              <option value="dark">🌚</option>
+              <option value="light">🌞</option>
+            </select>
             <button
               className="icon icon--menu"
               onClick={showMenu}
