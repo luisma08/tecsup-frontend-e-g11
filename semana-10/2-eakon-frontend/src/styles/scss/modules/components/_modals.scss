@@ -1,4 +1,4 @@
-.modal{
+.modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -9,10 +9,20 @@
     pointer-events: none;
     --translate-modal: 100%;
     transition: opacity 0.25s;
-
-    &--show{
+  
+    &--show {
+      opacity: 1;
+      pointer-events: auto;
+      --translate-modal: 0;
+    }
+  
+    &--header {
+      @include desktop {
+        position: static;
+        background-image: none;
         opacity: 1;
         pointer-events: auto;
         --translate-modal: 0;
+      }
     }
-}
+  }
