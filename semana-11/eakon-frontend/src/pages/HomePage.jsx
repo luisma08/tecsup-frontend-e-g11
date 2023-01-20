@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../redux/slices/homeSlice';
 
 const HomePage = () => {
-    const { value } = useSelector(state => state.home);
+    const { value } = useSelector(state => state.home);//obtener estado actual
     const dispatch = useDispatch();
 
   return (
