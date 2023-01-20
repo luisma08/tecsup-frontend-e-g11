@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import HomeHero from '../components/home/HomeHero';
 import { fetchReadHeroProducts } from '../redux/thunks/homeThunk';
 
 const HomePage = () => {
@@ -10,7 +11,7 @@ const HomePage = () => {
     }, []);
 
   return (
-    <h1>HomePage</h1>
+    <HomeHero />
   );
 };
  
