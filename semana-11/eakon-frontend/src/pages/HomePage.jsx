@@ -1,30 +1,17 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../redux/slices/homeSlice';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchReadHeroProducts } from '../redux/thunks/homeThunk';
 
 const HomePage = () => {
-    const { value } = useSelector(state => state.home);//obtener estado actual
     const dispatch = useDispatch();
 
+    useEffect(() => {
+      dispatch(fetchReadHeroProducts());
+    }, []);
+
   return (
-    <div>
-      <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{value}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
-    </div>
+    <h1>HomePage</h1>
   );
-}
+};
  
 export default HomePage;
